@@ -36,14 +36,23 @@ def random_column(board):
 
 ship_row = random_row(board)
 ship_column = random_column(board)
-
+"""
+For loop that only allows 4 turns
+"""
 for turn in range(4):
+    """
+    Allows the user to pick a row and a column and whether they hit a ship
+    """
     choose_row = int(input('Choose Row: '))
     choose_column = int(input('Choose Column: '))
 
     if choose_row == ship_row and choose_column == ship_column:
         print('Well done, Battleship was sunk!')
     else:
+        """
+        Tells user whether their pick was in range,
+        or if they have picked those num/cols before
+        """
         if choose_row not in range(6) or choose_column not in range(6):
             print('This is outside the board range, please try again')
         elif board[choose_row][choose_column] == "X":
