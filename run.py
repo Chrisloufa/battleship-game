@@ -34,6 +34,22 @@ def random_column(board):
     return randint(0, len(board) - 1)
 
 
-random_row(board)
-random_column(board)
-print_board(board)
+ship_row = random_row(board)
+ship_column = random_column(board)
+
+for turn in range(4):
+    choose_row = int(input('Choose Row: '))
+    choose_column = int(input('Choose Column: '))
+
+    if choose_row == ship_row and choose_column == ship_column:
+        print('Well done, Battleship was sunk!')
+    else:
+        if choose_row not in range(6) or choose_column not in range(6):
+            print('This is outside the board range, please try again')
+        elif board[choose_row][choose_column] == "X":
+            print("You have guessed that already")
+        else:
+            print('You missed, try again!')
+            board[choose_row][choose_column] = "X"
+        print_board(board)
+    print(turn + 1)
