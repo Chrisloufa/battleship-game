@@ -50,8 +50,8 @@ for turn in range(5):
     """
     Allows the user to pick a row and a column and whether they hit a ship
     """
-    choose_row = int(input('Choose Row: '))
-    choose_column = int(input('Choose Column: '))
+    choose_row = int(input('Choose Row (0-5): '))
+    choose_column = int(input('Choose Column (0-5): '))
 
     if choose_row == ship_row and choose_column == ship_column:
         print('Well done, Battleship was sunk!')
