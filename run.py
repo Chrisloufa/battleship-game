@@ -19,8 +19,12 @@ def print_board(board):
     for row in board:
         print(' ' .join(row))
 
+
 print("Let's play Battleships Arcade")
+print("X marks a hit")
+print("- marks a miss")
 print_board(board)
+
 
 def random_row(board):
     """
@@ -39,12 +43,11 @@ def random_column(board):
 ship_row = random_row(board)
 ship_column = random_column(board)
 
-print(ship_row)
-print(ship_column)
+
 """
 For loop that only allows 5 turns
 """
-turn = 0
+TURN = 0
 
 for turn in range(5):
     """
@@ -77,4 +80,4 @@ for turn in range(5):
         if turn == 5:
             print("Game over! You Lose.")
         print_board(board)
-    print(turn + 1)
+    print("Turn: ", turn + 1)
