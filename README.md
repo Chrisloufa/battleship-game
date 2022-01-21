@@ -48,3 +48,43 @@ You can refer to the rules of the game on here https://en.wikipedia.org/wiki/Bat
 <p align="center">
 <img src="images/gameover.png" width="600" height="100%">
 </p>
+
+### Future features
+
+- Add additional ships.
+- Allow oppenent to attack user ships.
+- Increase the ship size.
+
+## Data Model
+
+I decided to use a board class for the game, in this instance there is one board used to attack the computer ships.
+
+The board stores the data of the board size, ship location and user coordinate choices.
+
+## Testing
+
+- Passed code through PEP8 with no errors.
+
+## Validator testing
+
+- http://pep8online.com/checkresult
+
+<p align="center">
+<img src="images/pep8validator.png" width="600" height="100%">
+</p>
+
+## Deployment
+
+This project was deployed using Code Institute's mock terminal for Heroku.
+
+### Steps for deployment
+- Fork or clone this repository
+- Create a new Heroku app
+- Set the buildpacks to Python and NodeJS in that order
+- Link the Heroku app to the repository
+- Click on Deploy
+
+## Credits
+- Code institute for deployment terminal
+- Wikipedia for details of battleship game
+- Youtuber "Clever programmer" for his great instructional videos
