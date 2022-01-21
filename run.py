@@ -48,6 +48,7 @@ for turn in range(4):
 
     if choose_row == ship_row and choose_column == ship_column:
         print('Well done, Battleship was sunk!')
+        break
     else:
         """
         Tells user whether their pick was in range,
@@ -60,5 +61,7 @@ for turn in range(4):
         else:
             print('You missed, try again!')
             board[choose_row][choose_column] = "X"
+        if turn == 5:
+            print("Game over! You Lose.")
         print_board(board)
     print(turn + 1)
