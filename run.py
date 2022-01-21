@@ -19,6 +19,8 @@ def print_board(board):
     for row in board:
         print(' ' .join(row))
 
+print("Let's play Battleships Arcade")
+print_board(board)
 
 def random_row(board):
     """
@@ -37,9 +39,11 @@ def random_column(board):
 ship_row = random_row(board)
 ship_column = random_column(board)
 """
-For loop that only allows 4 turns
+For loop that only allows 5 turns
 """
-for turn in range(4):
+turn = 0
+
+for turn in range(5):
     """
     Allows the user to pick a row and a column and whether they hit a ship
     """
@@ -61,6 +65,10 @@ for turn in range(4):
         else:
             print('You missed, try again!')
             board[choose_row][choose_column] = "X"
+            turn = turn + 1
+        """
+        Tells you whether you have run out of turns
+        """
         if turn == 5:
             print("Game over! You Lose.")
         print_board(board)
