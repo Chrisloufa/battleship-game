@@ -38,6 +38,9 @@ def random_column(board):
 
 ship_row = random_row(board)
 ship_column = random_column(board)
+
+print(ship_row)
+print(ship_column)
 """
 For loop that only allows 5 turns
 """
@@ -52,6 +55,8 @@ for turn in range(5):
 
     if choose_row == ship_row and choose_column == ship_column:
         print('Well done, Battleship was sunk!')
+        board[choose_row][choose_column] = "X"
+        print_board(board)
         break
     else:
         """
@@ -60,11 +65,11 @@ for turn in range(5):
         """
         if choose_row not in range(6) or choose_column not in range(6):
             print('This is outside the board range, please try again')
-        elif board[choose_row][choose_column] == "X":
+        elif board[choose_row][choose_column] == "-":
             print("You have guessed that already")
         else:
             print('You missed, try again!')
-            board[choose_row][choose_column] = "X"
+            board[choose_row][choose_column] = "-"
             turn = turn + 1
         """
         Tells you whether you have run out of turns
