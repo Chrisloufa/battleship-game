@@ -28,8 +28,23 @@ You can refer to the rules of the game on here https://en.wikipedia.org/wiki/Bat
 <img src="images/invisiblemarker.png" width="600" height="100%">
 </p>
 
-- Accepts user coordinates input
-- Shows turn tally
+- Accepts user coordinates input.
+- Shows turn tally.
 <p align="center">
 <img src="images/userturns.png" width="600" height="100%">
+</p>
+
+- You cannot input coordinates outside of the playable area.
+- You cannot input the same choice twie.
+<p align="center">
+<img src="images/boardrange.png" width="600" height="100%">
+</p>
+
+<p align="center">
+<img src="images/samechoice.png" width="600" height="100%">
+</p>
+
+- Indicate when the game is over
+<p align="center">
+<img src="images/gameover.png" width="600" height="100%">
 </p>
