@@ -1,31 +1,35 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleships Arcade
 
-Welcome Chrisloufa,
+Battleships arcade is a Python terminal game, which runs on Heroku.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Users can try to pinpoint the battleship on the board and sink it before the turn tally is over. The ship occupies 1 point on the grid.
 
-## Reminders
+<p align="center">
+<img src="images/amiresponsive.png" width="600" height="100%">
+</p>
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## How to play
 
-## Creating the Heroku app
+You can refer to the rules of the game on here https://en.wikipedia.org/wiki/Battleship_(game)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+- In this version the player attempts to find the computers hidden Battleship.
+- The player has 5 chances to find the hidden Battleship.
+- If the player misses the Battleship it will be marked with a '-'.
+- If the player hits the Battleship it will be marked with a 'X'.
+- If the player hits the Battleship the game will indicate they have won.
+- If the player runs out of turns it will indicate they have lost.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Features
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### Existing features
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+- Ship is randomly generated on the board and the player will be unable to see this.
+<p align="center">
+<img src="images/invisiblemarker.png" width="600" height="100%">
+</p>
 
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+- Accepts user coordinates input
+- Shows turn tally
+<p align="center">
+<img src="images/userturns.png" width="600" height="100%">
+</p>
